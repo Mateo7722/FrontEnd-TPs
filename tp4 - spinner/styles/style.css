@@ -1,0 +1,97 @@
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+footer {
+  width: 100%;
+  height: 10%;
+  background-color: #403c3c;
+}
+
+footer h3 {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 90%;
+}
+
+button {
+  all: unset;
+
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+
+  font-size: 30px;
+
+  background-color: white;
+  border: none;
+  padding: 30px;
+  margin: 5px;
+  border-radius: 5%;
+  text-align: center;
+
+  font-weight: 900;
+
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* Creo una animacion a la que voy a llamar despues que lo que hace es rotar */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* La imagen por defecto es invisible */
+img {
+  margin: 0;
+  padding: 0;
+  width: 0;
+  height: 0;
+}
+
+/* La imagen aparece y le da la animacion que cree mas arriba para rotar */
+.spinner {
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+
+/* Clase que hace desaparecer el boton*/
+.hidden {
+  margin: 0;
+  padding: 0;
+  width: 0;
+  height: 0;
+  font-size: 0;
+}
